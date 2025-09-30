@@ -1,0 +1,12 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=1 D:\ESP32C3\Espressif\frameworks\local_control
+CMake Error in main/CMakeLists.txt:
+  Cannot find source file:
+
+    D:/ESP32C3/Espressif/frameworks/local_control/main/certs/prvtkey.pem
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

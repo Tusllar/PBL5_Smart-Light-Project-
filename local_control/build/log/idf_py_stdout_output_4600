@@ -1,0 +1,386 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\local_control\build\local_control.elf D:\ESP32C3\Espressif\frameworks\local_control\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py'
+�x�x�x�x�x�x�x�xx�x�������ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (65) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (72) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (78) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (85) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (91) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (98) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (104) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (149) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (280) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (289) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (296) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (297) boot: Disabling RNG early entropy source...[0m
+[0;32mI (307) cpu_start: Unicore app[0m
+[0;32mI (315) cpu_start: Pro cpu start user code[0m
+[0;32mI (315) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (316) app_init: Application information:[0m
+[0;32mI (316) app_init: Project name:     local_control[0m
+[0;32mI (320) app_init: App version:      1[0m
+[0;32mI (323) app_init: Compile time:     Sep 25 2025 19:25:36[0m
+[0;32mI (328) app_init: ELF file SHA256:  bd6170e61...[0m
+[0;32mI (333) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (336) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (340) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (344) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (348) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (354) heap_init: At 3FC9D230 len 00022DD0 (139 KiB): RAM[0m
+[0;32mI (360) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (366) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (372) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (378) spi_flash: detected chip: generic[0m
+[0;32mI (381) spi_flash: flash io: dio[0m
+[0;33mW (384) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (391) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (399) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (405) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (412) main_task: Started on CPU0[0m
+[0;32mI (422) main_task: Calling app_main()[0m
+[1;31mE (422) local control: app_main[0m
+[0;32mI (422) local control: NVS Flash initialization[0m
+[0;32mI (432) local control: Application driver initialization[0m
+[0;32mI (462) local control: Wi-Fi initialization[0m
+[0;32mI (462) pp: pp rom version: 9387209[0m
+[0;32mI (462) net80211: net80211 rom version: 9387209[0m
+[0;32mI (472) wifi:wifi driver task: 3fca6b5c, prio:23, stack:6656, core=0[0m
+[0;32mI (472) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (472) wifi:wifi certification version: v7.0[0m
+[0;32mI (472) wifi:config NVS flash: enabled[0m
+[0;32mI (482) wifi:config nano formatting: disabled[0m
+[0;32mI (482) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (482) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (492) wifi:Init management short buffer num: 32[0m
+[0;32mI (492) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (502) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (502) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (512) wifi:Init static rx buffer num: 10[0m
+[0;32mI (512) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (512) wifi_init: rx ba win: 6[0m
+[0;32mI (522) wifi_init: accept mbox: 6[0m
+[0;32mI (522) wifi_init: tcpip mbox: 32[0m
+[0;32mI (522) wifi_init: udp mbox: 6[0m
+[0;32mI (522) wifi_init: tcp mbox: 6[0m
+[0;32mI (532) wifi_init: tcp tx win: 5760[0m
+[0;32mI (532) wifi_init: tcp rx win: 5760[0m
+[0;32mI (532) wifi_init: tcp mss: 1440[0m
+[0;32mI (542) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (542) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (542) local control: Wi-Fi Station initialization[0m
+[0;32mI (552) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (592) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (592) wifi:enable tsf[0m
+[0;32mI (592) local control: wifi_station_initialize finished.[0m
+[0;32mI (602) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (602) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (612) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (662) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (772) wifi:connected with 4 chi em, aid = 8, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (772) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (772) wifi:pm start, type: 1[0m
+
+[0;32mI (782) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (782) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (812) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1982) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1982) local control: got ip:192.168.1.10[0m
+[0;32mI (1982) local control: connected to ap SSID:4 chi em password:daytro6868[0m
+[0;32mI (1982) local control: Server certificate length: 1123[0m
+[0;32mI (1992) local control: Private key length: 1733[0m
+[0;32mI (1992) local control: Server certificate start: 0x3c0e7614[0m
+[0;32mI (2002) local control: Private key start: 0x3c0e7a7b[0m
+[0;32mI (2002) mdns_mem: mDNS task will be created from internal RAM[0m
+[0;32mI (2012) esp_https_server: Starting server[0m
+[0;32mI (2012) esp_https_server: Server listening on port 443[0m
+[0;32mI (2022) local control: esp_local_ctrl service started with name : my_esp_ctrl_device[0m
+[0;32mI (2022) local control: [00] Hello world![0m
+[0;32mI (7032) local control: [01] Hello world![0m
+[0;32mI (12032) local control: [02] Hello world![0m
+[0;32mI (17032) local control: [03] Hello world![0m
+[0;32mI (22032) local control: [04] Hello world![0m
+[0;32mI (27032) local control: [05] Hello world![0m
+[0;32mI (28282) app_driver: Light OFF[0m
+[0;32mI (28642) app_driver: Light ON[0m
+[0;32mI (32032) local control: [06] Hello world![0m
+[0;32mI (37032) local control: [07] Hello world![0m
+[0;32mI (42032) local control: [08] Hello world![0m
+[0;32mI (47032) local control: [09] Hello world![0m
+[0;32mI (52032) local control: [10] Hello world![0m
+[0;32mI (57032) local control: [11] Hello world![0m
+[0;32mI (62032) local control: [12] Hello world![0m
+[0;32mI (67032) local control: [13] Hello world![0m
+[0;32mI (72032) local control: [14] Hello world![0m
+[0;32mI (77032) local control: [15] Hello world![0m
+[0;32mI (82032) local control: [16] Hello world![0m
+[0;32mI (87032) local control: [17] Hello world![0m
+[0;32mI (92032) local control: [18] Hello world![0m
+[0;32mI (97032) local control: [19] Hello world![0m
+[0;32mI (102032) local control: [20] Hello world![0m
+[0;32mI (107032) local control: [21] Hello world![0m
+[0;32mI (112032) local control: [22] Hello world![0m
+[0;32mI (117032) local control: [23] Hello world![0m
+[0;32mI (122032) local control: [24] Hello world![0m
+[0;32mI (127032) local control: [25] Hello world![0m
+[0;32mI (132032) local control: [26] Hello world![0m
+[0;32mI (137032) local control: [27] Hello world![0m
+[0;32mI (142032) local control: [28] Hello world![0m
+[0;32mI (147032) local control: [29] Hello world![0m
+[0;32mI (152032) local control: [30] Hello world![0m
+[0;32mI (157032) local control: [31] Hello world![0m
+[0;32mI (162032) local control: [32] Hello world![0m
+[0;32mI (167032) local control: [33] Hello world![0m
+[0;32mI (172032) local control: [34] Hello world![0m
+[0;32mI (177032) local control: [35] Hello world![0m
+[0;32mI (182032) local control: [36] Hello world![0m
+[0;32mI (187032) local control: [37] Hello world![0m
+[0;32mI (192032) local control: [38] Hello world![0m
+[0;32mI (197032) local control: [39] Hello world![0m
+[0;32mI (202032) local control: [40] Hello world![0m
+[0;32mI (207032) local control: [41] Hello world![0m
+[0;32mI (212032) local control: [42] Hello world![0m
+[0;32mI (217032) local control: [43] Hello world![0m
+[0;32mI (222032) local control: [44] Hello world![0m
+[0;32mI (227032) local control: [45] Hello world![0m
+[0;32mI (232032) local control: [46] Hello world![0m
+[0;32mI (237032) local control: [47] Hello world![0m
+[0;32mI (242032) local control: [48] Hello world![0m
+[0;32mI (247032) local control: [49] Hello world![0m
+[0;32mI (252032) local control: [50] Hello world![0m
+[0;32mI (257032) local control: [51] Hello world![0m
+[0;32mI (262032) local control: [52] Hello world![0m
+[0;32mI (267032) local control: [53] Hello world![0m
+[0;32mI (272032) local control: [54] Hello world![0m
+[0;32mI (277032) local control: [55] Hello world![0m
+[0;32mI (282032) local control: [56] Hello world![0m
+[0;32mI (287032) local control: [57] Hello world![0m
+[0;32mI (292032) local control: [58] Hello world![0m
+[0;32mI (297032) local control: [59] Hello world![0m
+[0;32mI (302032) local control: [60] Hello world![0m
+[0;32mI (307032) local control: [61] Hello world![0m
+[0;32mI (312032) local control: [62] Hello world![0m
+[0;32mI (317032) local control: [63] Hello world![0m
+[0;32mI (322032) local control: [64] Hello world![0m
+[0;32mI (327032) local control: [65] Hello world![0m
+[0;32mI (332032) local control: [66] Hello world![0m
+[0;32mI (337032) local control: [67] Hello world![0m
+[0;32mI (342032) local control: [68] Hello world![0m
+[0;32mI (347032) local control: [69] Hello world![0m
+[0;32mI (352032) local control: [70] Hello world![0m
+[0;32mI (357032) local control: [71] Hello world![0m
+[0;32mI (357162) app_driver: Light OFF[0m
+[0;32mI (357632) app_driver: Light ON[0m
+[0;32mI (362032) local control: [72] Hello world![0m
+[0;32mI (367032) local control: [73] Hello world![0m
+[0;32mI (372032) local control: [74] Hello world![0m
+[0;32mI (375122) app_driver: Light OFF[0m
+[0;32mI (377032) local control: [75] Hello world![0m
+[0;32mI (382032) local control: [76] Hello world![0m
+[0;32mI (387032) local control: [77] Hello world![0m
+[0;32mI (392032) local control: [78] Hello world![0m
+[0;32mI (397032) local control: [79] Hello world![0m
+[0;32mI (402032) local control: [80] Hello world![0m
+[0;32mI (407032) local control: [81] Hello world![0m
+[0;32mI (412032) local control: [82] Hello world![0m
+[0;32mI (417032) local control: [83] Hello world![0m
+[0;32mI (422032) local control: [84] Hello world![0m
+[0;32mI (427032) local control: [85] Hello world![0m
+[0;32mI (432032) local control: [86] Hello world![0m
+[0;32mI (437032) local control: [87] Hello world![0m
+[0;32mI (442032) local control: [88] Hello world![0m
+[0;32mI (447032) local control: [89] Hello world![0m
+[0;32mI (452032) local control: [90] Hello world![0m
+[0;32mI (457032) local control: [91] Hello world![0m
+[0;32mI (462032) local control: [92] Hello world![0m
+[0;32mI (467032) local control: [93] Hello world![0m
+[0;32mI (472032) local control: [94] Hello world![0m
+[0;32mI (477032) local control: [95] Hello world![0m
+[0;32mI (482032) local control: [96] Hello world![0m
+[0;32mI (487032) local control: [97] Hello world![0m
+[0;32mI (492032) local control: [98] Hello world![0m
+[0;32mI (497032) local control: [99] Hello world![0m
+[0;32mI (502032) local control: [100] Hello world![0m
+[0;32mI (507032) local control: [101] Hello world![0m
+[0;32mI (512032) local control: [102] Hello world![0m
+[0;32mI (517032) local control: [103] Hello world![0m
+[0;32mI (522032) local control: [104] Hello world![0m
+[0;32mI (527032) local control: [105] Hello world![0m
+[0;32mI (532032) local control: [106] Hello world![0m
+[0;32mI (537032) local control: [107] Hello world![0m
+[0;32mI (542032) local control: [108] Hello world![0m
+[0;32mI (547032) local control: [109] Hello world![0m
+[0;32mI (552032) local control: [110] Hello world![0m
+[0;32mI (557032) local control: [111] Hello world![0m
+[0;32mI (562032) local control: [112] Hello world![0m
+[0;32mI (567032) local control: [113] Hello world![0m
+[0;32mI (572032) local control: [114] Hello world![0m
+[0;32mI (577032) local control: [115] Hello world![0m
+[0;32mI (582032) local control: [116] Hello world![0m
+[0;32mI (587032) local control: [117] Hello world![0m
+[0;32mI (592032) local control: [118] Hello world![0m
+[0;32mI (597032) local control: [119] Hello world![0m
+[0;32mI (602032) local control: [120] Hello world![0m
+[0;32mI (607032) local control: [121] Hello world![0m
+[0;32mI (612032) local control: [122] Hello world![0m
+[0;32mI (617032) local control: [123] Hello world![0m
+[0;32mI (622032) local control: [124] Hello world![0m
+[0;32mI (627032) local control: [125] Hello world![0m
+[0;32mI (632032) local control: [126] Hello world![0m
+[0;32mI (637032) local control: [127] Hello world![0m
+[0;32mI (642032) local control: [128] Hello world![0m
+[0;32mI (644692) app_driver: Light ON[0m
+[0;32mI (645132) app_driver: Light OFF[0m
+[0;32mI (647032) local control: [129] Hello world![0m
+[0;32mI (652032) local control: [130] Hello world![0m
+[0;32mI (657032) local control: [131] Hello world![0m
+[0;32mI (662032) local control: [132] Hello world![0m
+[0;32mI (667032) local control: [133] Hello world![0m
+[0;32mI (672032) local control: [134] Hello world![0m
+[0;32mI (677032) local control: [135] Hello world![0m
+[0;32mI (682032) local control: [136] Hello world![0m
+[0;32mI (687032) local control: [137] Hello world![0m
+[0;32mI (692032) local control: [138] Hello world![0m
+[0;32mI (697032) local control: [139] Hello world![0m
+[0;32mI (702032) local control: [140] Hello world![0m
+[0;32mI (707032) local control: [141] Hello world![0m
+[0;32mI (712032) local control: [142] Hello world![0m
+[0;32mI (717032) local control: [143] Hello world![0m
+[0;32mI (722032) local control: [144] Hello world![0m
+[0;32mI (727032) local control: [145] Hello world![0m
+[0;32mI (732032) local control: [146] Hello world![0m
+[0;32mI (737032) local control: [147] Hello world![0m
+[0;32mI (742032) local control: [148] Hello world![0m
+[0;32mI (747032) local control: [149] Hello world![0m
+[0;32mI (752032) local control: [150] Hello world![0m
+[0;32mI (757032) local control: [151] Hello world![0m
+[0;32mI (762032) local control: [152] Hello world![0m
+[0;32mI (767032) local control: [153] Hello world![0m
+[0;32mI (772032) local control: [154] Hello world![0m
+[0;32mI (777032) local control: [155] Hello world![0m
+[0;32mI (782032) local control: [156] Hello world![0m
+[0;32mI (787032) local control: [157] Hello world![0m
+[0;32mI (792032) local control: [158] Hello world![0m
+[0;32mI (797032) local control: [159] Hello world![0m
+[0;32mI (802032) local control: [160] Hello world![0m
+[0;32mI (807032) local control: [161] Hello world![0m
+[0;32mI (812032) local control: [162] Hello world![0m
+[0;32mI (817032) local control: [163] Hello world![0m
+[0;32mI (822032) local control: [164] Hello world![0m
+[0;32mI (827032) local control: [165] Hello world![0m
+[0;32mI (832032) local control: [166] Hello world![0m
+[0;32mI (837032) local control: [167] Hello world![0m
+[0;32mI (842032) local control: [168] Hello world![0m
+[0;32mI (847032) local control: [169] Hello world![0m
+[0;32mI (852032) local control: [170] Hello world![0m
+[0;32mI (857032) local control: [171] Hello world![0m
+[0;32mI (862032) local control: [172] Hello world![0m
+[0;32mI (867032) local control: [173] Hello world![0m
+[0;32mI (872032) local control: [174] Hello world![0m
+[0;32mI (877032) local control: [175] Hello world![0m
+[0;32mI (882032) local control: [176] Hello world![0m
+[0;32mI (887032) local control: [177] Hello world![0m
+[0;32mI (892032) local control: [178] Hello world![0m
+[0;32mI (897032) local control: [179] Hello world![0m
+[0;32mI (902032) local control: [180] Hello world![0m
+[0;32mI (907032) local control: [181] Hello world![0m
+[0;32mI (912032) local control: [182] Hello world![0m
+[0;32mI (917032) local control: [183] Hello world![0m
+[0;32mI (922032) local control: [184] Hello world![0m
+[0;32mI (927032) local control: [185] Hello world![0m
+[0;32mI (932032) local control: [186] Hello world![0m
+[0;32mI (937032) local control: [187] Hello world![0m
+[0;32mI (942032) local control: [188] Hello world![0m
+[0;32mI (947032) local control: [189] Hello world![0m
+[0;32mI (952032) local control: [190] Hello world![0m
+[0;32mI (957032) local control: [191] Hello world![0m
+[0;32mI (962032) local control: [192] Hello world![0m
+[0;32mI (967032) local control: [193] Hello world![0m
+[0;32mI (972032) local control: [194] Hello world![0m
+[0;32mI (977032) local control: [195] Hello world![0m
+[0;32mI (982032) local control: [196] Hello world![0m
+[0;32mI (987032) local control: [197] Hello world![0m
+[0;32mI (992032) local control: [198] Hello world![0m
+[0;32mI (997032) local control: [199] Hello world![0m
+[0;32mI (1002032) local control: [200] Hello world![0m
+[0;32mI (1007032) local control: [201] Hello world![0m
+[0;32mI (1012032) local control: [202] Hello world![0m
+[0;32mI (1017032) local control: [203] Hello world![0m
+[0;32mI (1022032) local control: [204] Hello world![0m
+[0;32mI (1027032) local control: [205] Hello world![0m
+[0;32mI (1032032) local control: [206] Hello world![0m
+[0;32mI (1037032) local control: [207] Hello world![0m
+[0;32mI (1042032) local control: [208] Hello world![0m
+[0;32mI (1047032) local control: [209] Hello world![0m
+[0;32mI (1052032) local control: [210] Hello world![0m
+[0;32mI (1057032) local control: [211] Hello world![0m
+[0;32mI (1062032) local control: [212] Hello world![0m
+[0;32mI (1067032) local control: [213] Hello world![0m
+[0;32mI (1072032) local control: [214] Hello world![0m
+[0;32mI (1077032) local control: [215] Hello world![0m
+[0;32mI (1082032) local control: [216] Hello world![0m
+[0;32mI (1087032) local control: [217] Hello world![0m
+[0;32mI (1092032) local control: [218] Hello world![0m
+[0;32mI (1097032) local control: [219] Hello world![0m
+[0;32mI (1102032) local control: [220] Hello world![0m
+[0;32mI (1107032) local control: [221] Hello world![0m
+[0;32mI (1112032) local control: [222] Hello world![0m
+[0;32mI (1117032) local control: [223] Hello world![0m
+[0;32mI (1122032) local control: [224] Hello world![0m
+[0;32mI (1127032) local control: [225] Hello world![0m
+[0;32mI (1132032) local control: [226] Hello world![0m
+[0;32mI (1137032) local control: [227] Hello world![0m
+[0;32mI (1142032) local control: [228] Hello world![0m
+[0;32mI (1147032) local control: [229] Hello world![0m
+[0;32mI (1152032) local control: [230] Hello world![0m
+[0;32mI (1157032) local control: [231] Hello world![0m
+[0;32mI (1162032) local control: [232] Hello world![0m
+[0;32mI (1167032) local control: [233] Hello world![0m
+[0;32mI (1172032) local control: [234] Hello world![0m
+[0;32mI (1177032) local control: [235] Hello world![0m
+[0;32mI (1182032) local control: [236] Hello world![0m
+[0;32mI (1187032) local control: [237] Hello world![0m
+[0;32mI (1192032) local control: [238] Hello world![0m
+[0;32mI (1197032) local control: [239] Hello world![0m
+[0;32mI (1202032) local control: [240] Hello world![0m
+[0;32mI (1207032) local control: [241] Hello world![0m
+[0;32mI (1212032) local control: [242] Hello world![0m
+[0;32mI (1217032) local control: [243] Hello world![0m
+[0;32mI (1222032) local control: [244] Hello world![0m
+[0;32mI (1227032) local control: [245] Hello world![0m
+[0;32mI (1232032) local control: [246] Hello world![0m
+[0;32mI (1237032) local control: [247] Hello world![0m
+[0;32mI (1242032) local control: [248] Hello world![0m
+[0;32mI (1247032) local control: [249] Hello world![0m
+[0;32mI (1252032) local control: [250] Hello world![0m
+[0;32mI (1257032) local control: [251] Hello world![0m
+[0;32mI (1262032) local control: [252] Hello world![0m
+[0;32mI (1267032) local control: [253] Hello world![0m
+[0;32mI (1272032) local control: [254] Hello world![0m
+[0;32mI (1277032) local control: [255] Hello world![0m
+[0;32mI (1282032) local control: [256] Hello world![0m
+[0;32mI (1287032) local control: [257] Hello world![0m
+[0;32mI (1292032) local control: [258] Hello world![0m
+[0;32mI (1297032) local control: [259] Hello world![0m
+[0;32mI (1302032) local control: [260] Hello world![0m
+[0;32mI (1307032) local control: [261] Hello world![0m

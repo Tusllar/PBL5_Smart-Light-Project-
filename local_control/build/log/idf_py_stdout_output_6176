@@ -1,0 +1,2037 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\local_control\build\local_control.elf D:\ESP32C3\Espressif\frameworks\local_control\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (65) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (72) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (78) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (85) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (91) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (98) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (104) boot: End of partition table[0m
+[0;32mI (107) boot: No factory image, trying OTA 0[0m
+[0;32mI (111) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (145) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (153) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (284) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (293) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (294) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (295) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (300) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (308) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (312) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (65) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (72) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (78) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (85) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (91) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (98) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (104) boot: End of partition table[0m
+[0;32mI (107) boot: No factory image, trying OTA 0[0m
+[0;32mI (111) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (145) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (153) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (284) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (293) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (294) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (295) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (300) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (308) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (312) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 25 2025 19:27:47[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) boot: No factory image, trying OTA 0[0m
+[0;32mI (116) esp_image: segment 0: paddr=00020020 vaddr=3c0d0020 size=24bdch (150492) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=00044c04 vaddr=3fc95400 size=02ef4h ( 12020) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00047b00 vaddr=40380000 size=08518h ( 34072) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=c5f44h (810820) map[0m
+[0;32mI (288) esp_image: segment 4: paddr=00115f6c vaddr=40388518 size=0cea0h ( 52896) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=00122e14 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (299) esp_image: Checksum failed. Calculated 0xfb read 0xb9[0m
+[1;31mE (300) boot: OTA app partition slot 0 is not bootable[0m
+[1;31mE (305) esp_image: image at 0x1b0000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (312) boot: OTA app partition slot 1 is not bootable[0m
+[1;31mE (317) boot: No bootable app partitions in the partition table[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
