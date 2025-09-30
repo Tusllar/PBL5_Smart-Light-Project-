@@ -18,13 +18,14 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "driver/timer.h"
+
 #include "driver/ledc.h"
 
 #define HW_TIMER_GROUP (0)                                 /**< Hardware timer group */
 #define HW_TIMER_ID (0)                                    /**< Hardware timer number */
 #define HW_TIMER_DIVIDER (16)                              /**< Hardware timer clock divider */
-#define HW_TIMER_SCALE (20000000  / HW_TIMER_DIVIDER) /**< Convert counter value to seconds */
+#define HW_TIMER_BASE_CLK (80 * 1000000) // 80 MHz APB clock
+#define HW_TIMER_SCALE (HW_TIMER_BASE_CLK / HW_TIMER_DIVIDER) /**< Convert counter value to seconds */
 #define GAMMA_CORRECTION 0.8                               /**< Gamma curve parameter */
 #define GAMMA_TABLE_SIZE 256                               /**< Gamma table size, used for led fade*/
 #define DUTY_SET_CYCLE (20)                                /**< Set duty cycle */

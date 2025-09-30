@@ -22,8 +22,7 @@
 
 #include "light_driver.h"
 #include "app_storage.h"
-#include "led_strip.h"
-#define LIGHT_GPIO_ONBOARD  8
+
 /**
  * @brief The state of the five-color light
  */
@@ -96,45 +95,6 @@ esp_err_t light_driver_init(light_driver_config_t *config)
     return ESP_OK;
 }
 
-// static const char *TAG = "light_gpio8";
-static led_strip_handle_t s_led_strip = NULL;
-
-esp_err_t light_driver_set_switch_gpio8(bool on)
-{
-    esp_err_t ret = ESP_OK;
-
-    // Khởi tạo 1 lần
-    if (s_led_strip == NULL) {
-        led_strip_config_t strip_config = {
-            .strip_gpio_num = LIGHT_GPIO_ONBOARD,
-            .max_leds = 1,  // chỉ có 1 LED on-board
-        };
-        led_strip_rmt_config_t rmt_config = {
-            .resolution_hz = 10 * 1000 * 1000, // 10MHz
-            .flags.with_dma = false,
-        };
-
-        ret = led_strip_new_rmt_device(&strip_config, &rmt_config, &s_led_strip);
-        if (ret != ESP_OK) {
-            ESP_LOGE(TAG, "Failed to init led_strip: %d", ret);
-            return ret;
-        }
-
-        // clear trước khi dùng
-        led_strip_clear(s_led_strip);
-    }
-
-    if (on) {
-        // Bật LED (ví dụ màu trắng mờ)
-        led_strip_set_pixel(s_led_strip, 0, 16, 16, 16);
-        led_strip_refresh(s_led_strip);
-    } else {
-        // Tắt LED
-        led_strip_clear(s_led_strip);
-    }
-
-    return ESP_OK;
-}
 esp_err_t light_driver_deinit()
 {
     esp_err_t ret = ESP_OK;
@@ -622,21 +582,15 @@ static void light_fade_timer_cb(TimerHandle_t xTimer)
     uint32_t fade_period_ms = LIGHT_FADE_PERIOD_MAX_MS * 2 / 6;
     int variety = (g_fade_hue > 180) ? 60 : -60;
 
-    // Dừng timer nếu hue vượt biên
     if (g_light_status.hue >= 360 || g_light_status.hue <= 0) {
         light_fade_timer_stop();
-        return;  // nên return luôn để tránh chạy tiếp
     }
 
-    // Cập nhật hue
     g_light_status.hue = g_light_status.hue >= 360 ? 360 : g_light_status.hue + variety;
     g_light_status.hue = g_light_status.hue <= 60 ? 0 : g_light_status.hue + variety;
+   
+    light_driver_hsv2rgb(g_light_status.hue, g_light_status.saturation, g_light_status.value, &red, &green, &blue);
 
-    // Chuyển HSV -> RGB
-    light_driver_hsv2rgb(g_light_status.hue, g_light_status.saturation, g_light_status.value,
-                         &red, &green, &blue);
-
-    // Cập nhật LED
     iot_led_set_channel(CHANNEL_ID_RED, red, fade_period_ms);
     iot_led_set_channel(CHANNEL_ID_GREEN, green, fade_period_ms);
     iot_led_set_channel(CHANNEL_ID_BLUE, blue, fade_period_ms);

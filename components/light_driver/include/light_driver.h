@@ -105,7 +105,6 @@ esp_err_t light_driver_set_brightness(uint8_t brightness);
 esp_err_t light_driver_set_hsv(uint16_t hue, uint8_t saturation, uint8_t value);
 esp_err_t light_driver_set_ctb(uint8_t color_temperature, uint8_t brightness);
 esp_err_t light_driver_set_switch(bool status);
-esp_err_t light_driver_set_switch_gpio8(bool on);
 
 /**@}*/
 

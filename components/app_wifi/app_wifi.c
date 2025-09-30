@@ -31,9 +31,9 @@
 #include <wifi_provisioning/scheme_softap.h>
 #endif /* CONFIG_APP_WIFI_PROV_TRANSPORT_BLE */
 
-#include <qrcode.h>
-#include <nvs.h>
-#include <nvs_flash.h>
+#include "qrcode.h"
+#include "nvs_flash.h"
+#include "nvs.h"
 #include "app_wifi.h"
 
 static const char *TAG = "app_wifi";
