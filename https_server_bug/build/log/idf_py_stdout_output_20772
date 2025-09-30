@@ -1,0 +1,348 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\https_server_bug\build\https_server_bug.elf D:\ESP32C3\Espressif\frameworks\https_server_bug\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 24 2025 07:19:26[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (65) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (72) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (78) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (85) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (91) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (98) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (104) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00020020 vaddr=3c0c0020 size=202bch (131772) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=000402e4 vaddr=3fc95400 size=02ed4h ( 11988) load[0m
+[0;32mI (138) esp_image: segment 2: paddr=000431c0 vaddr=40380000 size=0ce58h ( 52824) load[0m
+[0;32mI (149) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=b4ce8h (740584) map[0m
+[0;32mI (268) esp_image: segment 4: paddr=00104d10 vaddr=4038ce58 size=08560h ( 34144) load[0m
+[0;32mI (274) esp_image: segment 5: paddr=0010d278 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (281) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (281) boot: Disabling RNG early entropy source...[0m
+[0;32mI (293) cpu_start: Unicore app[0m
+[0;32mI (301) cpu_start: Pro cpu start user code[0m
+[0;32mI (301) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (301) app_init: Application information:[0m
+[0;32mI (301) app_init: Project name:     https_server_bug[0m
+[0;32mI (306) app_init: App version:      1[0m
+[0;32mI (309) app_init: Compile time:     Sep 24 2025 07:18:42[0m
+[0;32mI (314) app_init: ELF file SHA256:  3ab88d083...[0m
+[0;32mI (319) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (322) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (326) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (330) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (334) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (340) heap_init: At 3FC9C930 len 000236D0 (141 KiB): RAM[0m
+[0;32mI (346) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (352) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (358) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (364) spi_flash: detected chip: generic[0m
+[0;32mI (367) spi_flash: flash io: dio[0m
+[0;33mW (370) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (377) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (385) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (391) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (398) main_task: Started on CPU0[0m
+[0;32mI (408) main_task: Calling app_main()[0m
+[1;31mE (408) https server: app_main[0m
+[0;32mI (408) https server: NVS Flash initialization[0m
+[0;32mI (418) https server: Application driver initialization[0m
+[0;32mI (438) https server: Wi-Fi initialization[0m
+[0;32mI (438) pp: pp rom version: 9387209[0m
+[0;32mI (438) net80211: net80211 rom version: 9387209[0m
+[0;32mI (448) wifi:wifi driver task: 3fca61b8, prio:23, stack:6656, core=0[0m
+[0;32mI (448) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (448) wifi:wifi certification version: v7.0[0m
+[0;32mI (458) wifi:config NVS flash: enabled[0m
+[0;32mI (458) wifi:config nano formatting: disabled[0m
+[0;32mI (458) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (468) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (468) wifi:Init management short buffer num: 32[0m
+[0;32mI (478) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (478) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (478) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (488) wifi:Init static rx buffer num: 10[0m
+[0;32mI (488) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (498) wifi_init: rx ba win: 6[0m
+[0;32mI (498) wifi_init: accept mbox: 6[0m
+[0;32mI (498) wifi_init: tcpip mbox: 32[0m
+[0;32mI (508) wifi_init: udp mbox: 6[0m
+[0;32mI (508) wifi_init: tcp mbox: 6[0m
+[0;32mI (508) wifi_init: tcp tx win: 5760[0m
+[0;32mI (508) wifi_init: tcp rx win: 5760[0m
+[0;32mI (518) wifi_init: tcp mss: 1440[0m
+[0;32mI (518) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (518) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (528) https server: Wi-Fi Station initialization[0m
+[0;32mI (528) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (568) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (568) wifi:enable tsf[0m
+[0;32mI (568) https server: wifi_station_initialize finished.[0m
+[0;32mI (578) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (578) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (598) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (658) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (758) wifi:connected with 4 chi em, aid = 5, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (758) wifi:security: WPA2-PSK, phy: bgn, rssi: -44[0m
+[0;32mI (758) wifi:pm start, type: 1[0m
+
+[0;32mI (758) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (768) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (848) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1958) esp_netif_handlers: sta ip: 192.168.1.11, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1958) https server: got ip:192.168.1.11[0m
+[0;32mI (1958) https server: connected to ap SSID:4 chi em password:daytro6868[0m
+[0;32mI (1958) https server: Starting server[0m
+[0;32mI (1968) https server: Server certificate length: 1179[0m
+[0;32mI (1968) https server: Private key length: 1733[0m
+[0;32mI (1978) https server: Server certificate start: 0x3c0d487c[0m
+[0;32mI (1978) https server: Private key start: 0x3c0d4d1b[0m
+[0;32mI (1988) esp_https_server: Starting server[0m
+[0;32mI (1988) esp_https_server: Server listening on port 443[0m
+[0;32mI (1988) https server: Registering URI handlers[0m
+[0;32mI (1998) https server: [00] Hello world![0m
+[0;32mI (5358) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:23:fc:a8), tid:0, ssn:4, winSize:64[0m
+[0;32mI (5468) esp_https_server: performing session handshake[0m
+[0;32mI (6998) https server: [01] Hello world![0m
+[0;32mI (11998) https server: [02] Hello world![0m
+[0;32mI (16998) https server: [03] Hello world![0m
+[0;32mI (21998) https server: [04] Hello world![0m
+[0;32mI (26998) https server: [05] Hello world![0m
+[0;32mI (31998) https server: [06] Hello world![0m
+[0;32mI (36998) https server: [07] Hello world![0m
+[0;32mI (39868) esp_https_server: performing session handshake[0m
+[1;31mE (40578) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (40578) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (40588) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (40588) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (40598) esp_https_server: performing session handshake[0m
+[1;31mE (41308) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (41308) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (41308) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (41308) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (41998) https server: [08] Hello world![0m
+[0;32mI (46998) https server: [09] Hello world![0m
+[0;32mI (48288) esp_https_server: performing session handshake[0m
+[1;31mE (48998) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (48998) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (48998) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (48998) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (49008) esp_https_server: performing session handshake[0m
+[1;31mE (49728) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (49728) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (49728) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (49728) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (49738) esp_https_server: performing session handshake[0m
+[0;32mI (51998) https server: [10] Hello world![0m
+[0;33mW (52368) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (52368) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (56998) https server: [11] Hello world![0m
+[0;32mI (61998) https server: [12] Hello world![0m
+[0;32mI (63628) esp_https_server: performing session handshake[0m
+[1;31mE (64338) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (64338) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (64348) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (64348) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (64358) esp_https_server: performing session handshake[0m
+[1;31mE (65068) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (65068) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (65068) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (65078) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (65088) esp_https_server: performing session handshake[0m
+[0;32mI (66998) https server: [13] Hello world![0m
+[0;32mI (71998) https server: [14] Hello world![0m
+[0;32mI (72478) app_driver: Light OFF[0m
+[0;32mI (73638) app_driver: Light ON[0m
+[0;32mI (76278) app_driver: Light OFF[0m
+[0;32mI (76998) https server: [15] Hello world![0m
+[0;32mI (81998) https server: [16] Hello world![0m
+[0;32mI (83188) esp_https_server: performing session handshake[0m
+[1;31mE (83898) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (83898) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (83898) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (83908) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (83908) esp_https_server: performing session handshake[0m
+[1;31mE (84628) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (84628) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (84638) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (84638) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (84648) esp_https_server: performing session handshake[0m
+[0;32mI (86998) https server: [17] Hello world![0m
+[0;32mI (91798) app_driver: Light ON[0m
+[0;32mI (91998) https server: [18] Hello world![0m
+[0;32mI (94368) esp_https_server: performing session handshake[0m
+[1;31mE (95078) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (95078) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (95078) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (95088) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (95088) esp_https_server: performing session handshake[0m
+[1;31mE (95808) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (95808) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (95808) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (95808) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (95818) esp_https_server: performing session handshake[0m
+[0;32mI (96998) https server: [19] Hello world![0m
+[0;32mI (100138) app_driver: Light OFF[0m
+[0;32mI (101998) https server: [20] Hello world![0m
+[0;32mI (106328) esp_https_server: performing session handshake[0m
+[1;31mE (107038) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (107038) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (107048) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (107048) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (107048) esp_https_server: performing session handshake[0m
+[0;32mI (107448) https server: [21] Hello world![0m
+[1;31mE (107768) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (107768) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (107768) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (107778) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (107788) esp_https_server: performing session handshake[0m
+[0;32mI (112448) https server: [22] Hello world![0m
+[0;32mI (117448) https server: [23] Hello world![0m
+[0;32mI (122448) https server: [24] Hello world![0m
+[0;32mI (127448) https server: [25] Hello world![0m
+[0;32mI (132448) https server: [26] Hello world![0m
+[0;32mI (137448) https server: [27] Hello world![0m
+[0;32mI (142448) https server: [28] Hello world![0m
+[0;32mI (147448) https server: [29] Hello world![0m
+[0;32mI (152448) https server: [30] Hello world![0m
+[0;32mI (157448) https server: [31] Hello world![0m
+[0;32mI (162448) https server: [32] Hello world![0m
+[0;32mI (167448) https server: [33] Hello world![0m
+[0;32mI (172448) https server: [34] Hello world![0m
+[0;32mI (177448) https server: [35] Hello world![0m
+[0;32mI (182448) https server: [36] Hello world![0m
+[0;32mI (187448) https server: [37] Hello world![0m
+[0;32mI (192448) https server: [38] Hello world![0m
+[0;32mI (197448) https server: [39] Hello world![0m
+[0;32mI (202448) https server: [40] Hello world![0m
+[0;32mI (207448) https server: [41] Hello world![0m
+[0;32mI (212448) https server: [42] Hello world![0m
+[0;32mI (217448) https server: [43] Hello world![0m
+[0;32mI (222448) https server: [44] Hello world![0m
+[0;32mI (227448) https server: [45] Hello world![0m
+[0;32mI (232448) https server: [46] Hello world![0m
+[0;32mI (237448) https server: [47] Hello world![0m
+[0;32mI (242448) https server: [48] Hello world![0m
+[0;32mI (247448) https server: [49] Hello world![0m
+[0;32mI (252448) https server: [50] Hello world![0m
+[0;32mI (257448) https server: [51] Hello world![0m
+[0;32mI (262448) https server: [52] Hello world![0m
+[0;32mI (267448) https server: [53] Hello world![0m
+[0;32mI (272448) https server: [54] Hello world![0m
+[0;32mI (277448) https server: [55] Hello world![0m
+[0;32mI (282448) https server: [56] Hello world![0m
+[0;32mI (287448) https server: [57] Hello world![0m
+[0;32mI (292448) https server: [58] Hello world![0m
+[0;32mI (297448) https server: [59] Hello world![0m
+[0;32mI (302448) https server: [60] Hello world![0m
+[0;32mI (307448) https server: [61] Hello world![0m
+[0;32mI (312448) https server: [62] Hello world![0m
+[0;32mI (317448) https server: [63] Hello world![0m
+[0;32mI (322448) https server: [64] Hello world![0m
+[0;32mI (327448) https server: [65] Hello world![0m
+[0;32mI (332448) https server: [66] Hello world![0m
+[0;32mI (337448) https server: [67] Hello world![0m
+[0;32mI (342448) https server: [68] Hello world![0m
+[0;32mI (347448) https server: [69] Hello world![0m
+[0;32mI (352448) https server: [70] Hello world![0m
+[0;32mI (357448) https server: [71] Hello world![0m
+[0;32mI (362448) https server: [72] Hello world![0m
+[0;32mI (367448) https server: [73] Hello world![0m
+[0;32mI (372448) https server: [74] Hello world![0m
+[0;32mI (377448) https server: [75] Hello world![0m
+[0;32mI (382448) https server: [76] Hello world![0m
+[0;32mI (387448) https server: [77] Hello world![0m
+[0;32mI (392448) https server: [78] Hello world![0m
+[0;32mI (397448) https server: [79] Hello world![0m
+[0;32mI (402448) https server: [80] Hello world![0m
+[0;32mI (407448) https server: [81] Hello world![0m
+[0;32mI (412448) https server: [82] Hello world![0m
+[0;32mI (417448) https server: [83] Hello world![0m
+[0;32mI (422448) https server: [84] Hello world![0m
+[0;32mI (427448) https server: [85] Hello world![0m
+[0;32mI (432448) https server: [86] Hello world![0m
+[0;32mI (437448) https server: [87] Hello world![0m
+[0;32mI (442448) https server: [88] Hello world![0m
+[0;32mI (447448) https server: [89] Hello world![0m
+[0;32mI (452448) https server: [90] Hello world![0m
+[0;32mI (457448) https server: [91] Hello world![0m
+[0;32mI (462448) https server: [92] Hello world![0m
+[0;32mI (467448) https server: [93] Hello world![0m
+[0;32mI (472448) https server: [94] Hello world![0m
+[0;32mI (477448) https server: [95] Hello world![0m
+[0;32mI (482448) https server: [96] Hello world![0m
+[0;32mI (487448) https server: [97] Hello world![0m
+[0;32mI (492448) https server: [98] Hello world![0m
+[0;32mI (497448) https server: [99] Hello world![0m
+[0;32mI (502448) https server: [100] Hello world![0m
+[0;32mI (507448) https server: [101] Hello world![0m
+[0;32mI (512448) https server: [102] Hello world![0m
+[0;32mI (517448) https server: [103] Hello world![0m
+[0;32mI (522448) https server: [104] Hello world![0m
+[0;32mI (527448) https server: [105] Hello world![0m
+[0;32mI (532448) https server: [106] Hello world![0m
+[0;32mI (537448) https server: [107] Hello world![0m
+[0;32mI (542448) https server: [108] Hello world![0m
+[0;32mI (547448) https server: [109] Hello world![0m
+[0;32mI (552448) https server: [110] Hello world![0m
+[0;32mI (557448) https server: [111] Hello world![0m
+[0;32mI (562448) https server: [112] Hello world![0m
+[0;32mI (567448) https server: [113] Hello world![0m
+[0;32mI (572448) https server: [114] Hello world![0m
+[0;32mI (577448) https server: [115] Hello world![0m
+[0;32mI (582448) https server: [116] Hello world![0m
+[0;32mI (587448) https server: [117] Hello world![0m
+[0;32mI (592448) https server: [118] Hello world![0m
+[0;32mI (597448) https server: [119] Hello world![0m
+[0;32mI (602448) https server: [120] Hello world![0m
+[0;32mI (607448) https server: [121] Hello world![0m
+[0;32mI (612448) https server: [122] Hello world![0m
+[0;32mI (617448) https server: [123] Hello world![0m
+[0;32mI (622448) https server: [124] Hello world![0m
+[0;32mI (627448) https server: [125] Hello world![0m
+[0;32mI (632448) https server: [126] Hello world![0m
+[0;32mI (637448) https server: [127] Hello world![0m
+[0;32mI (642448) https server: [128] Hello world![0m
+[0;32mI (647448) https server: [129] Hello world![0m
+[0;32mI (652448) https server: [130] Hello world![0m
+[0;32mI (657448) https server: [131] Hello world![0m
+[0;32mI (662448) https server: [132] Hello world![0m
+[0;32mI (667448) https server: [133] Hello world![0m
+[0;32mI (672448) https server: [134] Hello world![0m
+[0;32mI (677448) https server: [135] Hello world![0m
+[0;32mI (682448) https server: [136] Hello world![0m
+[0;32mI (687448) https server: [137] Hello world![0m
+[0;32mI (692448) https server: [138] Hello world![0m
+[0;32mI (697448) https server: [139] Hello world![0m
+[0;32mI (702448) https server: [140] Hello world![0m
+[0;32mI (707448) https server: [141] Hello world![0m
+[0;32mI (712448) https server: [142] Hello world![0m
+[0;32mI (717448) https server: [143] Hello world![0m
+[0;32mI (722448) https server: [144] Hello world![0m
+[0;32mI (727448) https server: [145] Hello world![0m
+[0;32mI (732448) https server: [146] Hello world![0m
+[0;32mI (737448) https server: [147] Hello world![0m
+[0;32mI (742448) https server: [148] Hello world![0m
+[0;32mI (747448) https server: [149] Hello world![0m
+[0;32mI (752448) https server: [150] Hello world![0m
+[0;32mI (757448) https server: [151] Hello world![0m
+[0;32mI (762448) https server: [152] Hello world![0m
+[0;32mI (767448) https server: [153] Hello world![0m
+[0;32mI (772448) https server: [154] Hello world![0m
+[0;32mI (777448) https server: [155] Hello world![0m
+[0;32mI (782448) https server: [156] Hello world![0m

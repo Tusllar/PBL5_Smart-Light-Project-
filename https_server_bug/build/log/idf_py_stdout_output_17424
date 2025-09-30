@@ -1,0 +1,523 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\https_server_bug\build\https_server_bug.elf D:\ESP32C3\Espressif\frameworks\https_server_bug\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 24 2025 07:19:26[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (65) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (72) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (78) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (85) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (91) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (98) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (104) boot: End of partition table[0m
+[0;32mI (107) boot: No factory image, trying OTA 0[0m
+[0;32mI (111) esp_image: segment 0: paddr=00020020 vaddr=3c0c0020 size=20334h (131892) map[0m
+[0;32mI (140) esp_image: segment 1: paddr=0004035c vaddr=3fc95400 size=02ed4h ( 11988) load[0m
+[0;32mI (142) esp_image: segment 2: paddr=00043238 vaddr=40380000 size=0cde0h ( 52704) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=b4e60h (740960) map[0m
+[0;32mI (272) esp_image: segment 4: paddr=00104e88 vaddr=4038cde0 size=085d8h ( 34264) load[0m
+[0;32mI (278) esp_image: segment 5: paddr=0010d468 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (321) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (321) boot: Disabling RNG early entropy source...[0m
+[0;32mI (330) cpu_start: Unicore app[0m
+[0;32mI (338) cpu_start: Pro cpu start user code[0m
+[0;32mI (338) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (339) app_init: Application information:[0m
+[0;32mI (339) app_init: Project name:     https_server_bug[0m
+[0;32mI (343) app_init: App version:      1[0m
+[0;32mI (347) app_init: Compile time:     Sep 24 2025 07:50:09[0m
+[0;32mI (352) app_init: ELF file SHA256:  6e7245027...[0m
+[0;32mI (356) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (360) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (363) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (367) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (371) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (378) heap_init: At 3FC9C930 len 000236D0 (141 KiB): RAM[0m
+[0;32mI (383) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (389) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (395) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (401) spi_flash: detected chip: generic[0m
+[0;32mI (404) spi_flash: flash io: dio[0m
+[0;33mW (407) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (414) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (422) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (428) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (435) main_task: Started on CPU0[0m
+[0;32mI (445) main_task: Calling app_main()[0m
+[1;31mE (445) https server: app_main[0m
+[0;32mI (445) https server: NVS Flash initialization[0m
+[0;32mI (485) https server: Application driver initialization[0m
+[1;31mE (495) light_driver: Load light status failed[0m
+[0;32mI (515) https server: Wi-Fi initialization[0m
+[0;32mI (515) pp: pp rom version: 9387209[0m
+[0;32mI (515) net80211: net80211 rom version: 9387209[0m
+[0;32mI (525) wifi:wifi driver task: 3fca607c, prio:23, stack:6656, core=0[0m
+[0;32mI (525) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (525) wifi:wifi certification version: v7.0[0m
+[0;32mI (525) wifi:config NVS flash: enabled[0m
+[0;32mI (525) wifi:config nano formatting: disabled[0m
+[0;32mI (535) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (535) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (545) wifi:Init management short buffer num: 32[0m
+[0;32mI (545) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (555) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (555) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (555) wifi:Init static rx buffer num: 10[0m
+[0;32mI (565) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (565) wifi_init: rx ba win: 6[0m
+[0;32mI (565) wifi_init: accept mbox: 6[0m
+[0;32mI (575) wifi_init: tcpip mbox: 32[0m
+[0;32mI (575) wifi_init: udp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp mbox: 6[0m
+[0;32mI (585) wifi_init: tcp tx win: 5760[0m
+[0;32mI (585) wifi_init: tcp rx win: 5760[0m
+[0;32mI (585) wifi_init: tcp mss: 1440[0m
+[0;32mI (595) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (595) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (595) https server: Wi-Fi Station initialization[0m
+[0;32mI (615) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;33mW (615) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (645) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (705) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (705) wifi:enable tsf[0m
+[0;32mI (705) https server: wifi_station_initialize finished.[0m
+[0;32mI (1915) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1915) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1935) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1985) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2095) wifi:connected with 4 chi em, aid = 7, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (2095) wifi:security: WPA2-PSK, phy: bgn, rssi: -41[0m
+[0;32mI (2105) wifi:pm start, type: 1[0m
+
+[0;32mI (2105) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2115) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (2175) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3325) esp_netif_handlers: sta ip: 192.168.1.11, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3325) https server: got ip:192.168.1.11[0m
+[0;32mI (3325) https server: connected to ap SSID:4 chi em password:daytro6868[0m
+[0;32mI (3325) https server: Starting server[0m
+[0;32mI (3335) https server: Server certificate length: 1179[0m
+[0;32mI (3335) https server: Private key length: 1733[0m
+[0;32mI (3345) https server: Server certificate start: 0x3c0d48f0[0m
+[0;32mI (3345) https server: Private key start: 0x3c0d4d8f[0m
+[0;32mI (3355) esp_https_server: Starting server[0m
+[0;32mI (3355) esp_https_server: Server listening on port 443[0m
+[0;32mI (3355) https server: Registering URI handlers[0m
+[0;32mI (3365) https server: [00] Hello world![0m
+[0;32mI (8365) https server: [01] Hello world![0m
+[0;32mI (13365) https server: [02] Hello world![0m
+[0;32mI (18365) https server: [03] Hello world![0m
+[0;32mI (23365) https server: [04] Hello world![0m
+[0;32mI (28365) https server: [05] Hello world![0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 24 2025 07:19:26[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (65) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (72) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (78) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (85) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (91) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (98) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (104) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00020020 vaddr=3c0c0020 size=20334h (131892) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=0004035c vaddr=3fc95400 size=02ed4h ( 11988) load[0m
+[0;32mI (138) esp_image: segment 2: paddr=00043238 vaddr=40380000 size=0cde0h ( 52704) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=b4e60h (740960) map[0m
+[0;32mI (268) esp_image: segment 4: paddr=00104e88 vaddr=4038cde0 size=085d8h ( 34264) load[0m
+[0;32mI (274) esp_image: segment 5: paddr=0010d468 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (281) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (281) boot: Disabling RNG early entropy source...[0m
+[0;32mI (293) cpu_start: Unicore app[0m
+[0;32mI (301) cpu_start: Pro cpu start user code[0m
+[0;32mI (301) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (302) app_init: Application information:[0m
+[0;32mI (302) app_init: Project name:     https_server_bug[0m
+[0;32mI (306) app_init: App version:      1[0m
+[0;32mI (310) app_init: Compile time:     Sep 24 2025 07:50:09[0m
+[0;32mI (315) app_init: ELF file SHA256:  6e7245027...[0m
+[0;32mI (319) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (323) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (326) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (330) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (334) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (341) heap_init: At 3FC9C930 len 000236D0 (141 KiB): RAM[0m
+[0;32mI (346) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (352) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (358) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (364) spi_flash: detected chip: generic[0m
+[0;32mI (367) spi_flash: flash io: dio[0m
+[0;33mW (370) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (377) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (385) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (391) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (398) main_task: Started on CPU0[0m
+[0;32mI (408) main_task: Calling app_main()[0m
+[1;31mE (408) https server: app_main[0m
+[0;32mI (408) https server: NVS Flash initialization[0m
+[0;32mI (418) https server: Application driver initialization[0m
+[0;32mI (438) https server: Wi-Fi initialization[0m
+[0;32mI (438) pp: pp rom version: 9387209[0m
+[0;32mI (438) net80211: net80211 rom version: 9387209[0m
+[0;32mI (448) wifi:wifi driver task: 3fca61b8, prio:23, stack:6656, core=0[0m
+[0;32mI (448) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (448) wifi:wifi certification version: v7.0[0m
+[0;32mI (448) wifi:config NVS flash: enabled[0m
+[0;32mI (458) wifi:config nano formatting: disabled[0m
+[0;32mI (458) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (468) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (468) wifi:Init management short buffer num: 32[0m
+[0;32mI (468) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (478) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (478) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (488) wifi:Init static rx buffer num: 10[0m
+[0;32mI (488) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (488) wifi_init: rx ba win: 6[0m
+[0;32mI (498) wifi_init: accept mbox: 6[0m
+[0;32mI (498) wifi_init: tcpip mbox: 32[0m
+[0;32mI (498) wifi_init: udp mbox: 6[0m
+[0;32mI (508) wifi_init: tcp mbox: 6[0m
+[0;32mI (508) wifi_init: tcp tx win: 5760[0m
+[0;32mI (508) wifi_init: tcp rx win: 5760[0m
+[0;32mI (508) wifi_init: tcp mss: 1440[0m
+[0;32mI (518) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (518) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (518) https server: Wi-Fi Station initialization[0m
+[0;32mI (528) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (568) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (578) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (588) wifi:enable tsf[0m
+[0;32mI (588) https server: wifi_station_initialize finished.[0m
+[0;32mI (598) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (598) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (638) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (708) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (828) wifi:connected with 4 chi em, aid = 2, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (828) wifi:security: WPA2-PSK, phy: bgn, rssi: -46[0m
+[0;32mI (838) wifi:pm start, type: 1[0m
+
+[0;32mI (838) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (848) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (888) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2108) esp_netif_handlers: sta ip: 192.168.1.11, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2108) https server: got ip:192.168.1.11[0m
+[0;32mI (2108) https server: connected to ap SSID:4 chi em password:daytro6868[0m
+[0;32mI (2108) https server: Starting server[0m
+[0;32mI (2118) https server: Server certificate length: 1179[0m
+[0;32mI (2118) https server: Private key length: 1733[0m
+[0;32mI (2128) https server: Server certificate start: 0x3c0d48f0[0m
+[0;32mI (2128) https server: Private key start: 0x3c0d4d8f[0m
+[0;32mI (2138) esp_https_server: Starting server[0m
+[0;32mI (2138) esp_https_server: Server listening on port 443[0m
+[0;32mI (2138) https server: Registering URI handlers[0m
+[0;32mI (2148) https server: [00] Hello world![0m
+[0;32mI (5398) app_driver: Light OFF[0m
+[0;32mI (7148) https server: [01] Hello world![0m
+[0;32mI (7448) app_driver: Light ON[0m
+[0;32mI (12148) https server: [02] Hello world![0m
+[0;32mI (17148) https server: [03] Hello world![0m
+[0;32mI (21988) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:23:fc:a8), tid:0, ssn:4, winSize:64[0m
+[0;32mI (22148) https server: [04] Hello world![0m
+[0;32mI (22198) esp_https_server: performing session handshake[0m
+[1;31mE (22908) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (22908) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (22908) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (22908) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (22918) esp_https_server: performing session handshake[0m
+[1;31mE (23628) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (23628) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (23628) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (23638) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (23638) esp_https_server: performing session handshake[0m
+[1;31mE (24348) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (24348) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (24348) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (24348) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (25778) esp_https_server: performing session handshake[0m
+[1;31mE (26488) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (26488) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (26488) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (26498) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (26498) esp_https_server: performing session handshake[0m
+[0;32mI (27148) https server: [05] Hello world![0m
+[1;31mE (27218) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (27218) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (27218) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (27218) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (27228) esp_https_server: performing session handshake[0m
+[1;31mE (28038) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7280[0m
+[1;31mE (28038) esp_https_server: esp_tls_create_server_session failed, 0x7280[0m
+[1;31mE (28038) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (28038) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (29778) esp_https_server: performing session handshake[0m
+[0;33mW (31408) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (31408) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (32148) https server: [06] Hello world![0m
+[0;32mI (37048) esp_https_server: performing session handshake[0m
+[0;32mI (37438) https server: [07] Hello world![0m
+[1;31mE (37758) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (37758) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (37758) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (37758) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (37768) esp_https_server: performing session handshake[0m
+[1;31mE (38478) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (38488) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (38488) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (38488) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (38498) esp_https_server: performing session handshake[0m
+[0;32mI (42438) https server: [08] Hello world![0m
+[0;32mI (43908) esp_https_server: performing session handshake[0m
+[1;31mE (44618) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (44618) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (44618) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (44628) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (47398) esp_https_server: performing session handshake[0m
+[0;32mI (47778) https server: [09] Hello world![0m
+[1;31mE (48098) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (48098) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (48108) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (48108) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (52778) https server: [10] Hello world![0m
+[0;32mI (57778) https server: [11] Hello world![0m
+[0;32mI (62778) https server: [12] Hello world![0m
+[0;32mI (67778) https server: [13] Hello world![0m
+[0;32mI (72778) https server: [14] Hello world![0m
+[0;32mI (76168) esp_https_server: performing session handshake[0m
+[1;31mE (76868) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (76868) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (76868) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (76878) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (76878) esp_https_server: performing session handshake[0m
+[1;31mE (77598) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (77598) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (77598) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (77598) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (77608) esp_https_server: performing session handshake[0m
+[0;32mI (77998) https server: [15] Hello world![0m
+[0;32mI (82038) app_driver: Light OFF[0m
+Guru Meditation Error: Core  0 panic'ed (Cache error). 
+Cached memory region accessed while ibus or cache is disabled
+
+Core  0 register dump:
+MEPC    : 0x4201bcc2  RA      : 0x40381e04  SP      : 0x3fc98c30  GP      : 0x3fc95c00  
+TP      : 0x3fc9e4f0  T0      : 0x0000001f  T1      : 0x600c2134  T2      : 0x00000002  
+S0/FP   : 0x00000006  S1      : 0x00000006  A0      : 0x00000000  A1      : 0x00000000  
+A2      : 0x600ce000  A3      : 0x3fca145c  A4      : 0x00000000  A5      : 0x3fc97000  
+A6      : 0x03ffffff  A7      : 0x3fc96c74  S2      : 0x00000005  S3      : 0x00000001  
+S4      : 0x600ce000  S5      : 0x00001000  S6      : 0x00012000  S7      : 0x00000000  
+S8      : 0x00000010  S9      : 0x3c0c56e4  S10     : 0x00000080  S11     : 0x3fc98d60  
+T3      : 0x00000000  T4      : 0x00000064  T5      : 0x00000064  T6      : 0x00000064  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000019  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc98c30: 0x00001881 0x80000003 0x00000001 0x40381e16 0x00008000 0x00000000 0x00000001 0x40381f70
+3fc98c50: 0x00000000 0x3fc98c80 0x00000001 0x00000001 0x00001881 0x80000008 0x00000000 0x403930dc
+3fc98c70: 0x00000000 0x00000000 0x00000000 0x40380270 0x60023000 0x40385dd6 0x40385de2 0x00000000
+3fc98c90: 0x3fc98c8c 0x00000000 0x00000000 0x00000000 0x3fc98ca4 0xffffffff 0x3fc98ca4 0x3fc98ca4
+3fc98cb0: 0x00000000 0x3fc98cb8 0xffffffff 0x3fc98cb8 0x3fc98cb8 0x00000001 0x00000001 0x00000000
+3fc98cd0: 0x0001ffff 0x00000000 0x00000000 0x00000000 0x00000000 0x3fc98ce0 0x00000000 0x00000000
+3fc98cf0: 0x00000000 0x3fc98cf8 0xffffffff 0x3fc98cf8 0x3fc98cf8 0x00000000 0x3fc98d0c 0xffffffff
+3fc98d10: 0x3fc98d0c 0x3fc98d0c 0x00000001 0x00000001 0x00000000 0x0001ffff 0x00000000 0x00000000
+3fc98d30: 0x00000000 0x60023000 0x40385dd6 0x40385de2 0x3fc9cdbc 0x3fc9cde0 0x3fc9ce08 0x3fc9ce2c
+3fc98d50: 0x3fca166c 0x00000000 0x00000000 0x00000000 0x01680002 0x1e006400 0x00000064 0x000005dc
+3fc98d70: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98d90: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98db0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98dd0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98df0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98e10: 0x00000000 0x00000000 0x4038315c 0x00000000 0x40381384 0x00000000 0x4038188a 0x00000000
+3fc98e30: 0x40382828 0x3fc9c6f8 0x40387c1e 0x3fc98c80 0x00000000 0x00000000 0x420106a8 0x00000000
+3fc98e50: 0x40381e24 0x00000000 0x4038306c 0x00000000 0x40383042 0x00000000 0x00000000 0x00000000
+3fc98e70: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98e90: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98eb0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98ed0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98ef0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc98f10: 0x00000001 0x00000009 0x00000000 0x00800000 0x00800000 0x000f0000 0x00710000 0x0000001b
+3fc98f30: 0x00000001 0x3fca0ae4 0x3fca0b38 0x3fca0a8c 0x403819ae 0x40382916 0x00000000 0x00000000
+3fc98f50: 0x00000000 0x00000000 0x00000000 0x00000000 0x4201056e 0x00000000 0x00000000 0x00000000
+3fc98f70: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000001 0x6001f000 0x3fc9e670 0x00000546
+3fc98f90: 0x000005dc 0x000005f5 0x00000673 0x00000546 0x000005dc 0x000005f5 0x00000673 0x3fc99000
+3fc98fb0: 0x3fc99000 0x3fc990a0 0x3fc99090 0x00000000 0x3fc98fc4 0xffffffff 0x3fc98fc4 0x3fc98fc4
+3fc98fd0: 0x00000001 0x3fc98fd8 0xffffffff 0x3fca075c 0x3fca075c 0x00000000 0x0000000a 0x00000010
+3fc98ff0: 0x0001ffff 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc99010: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+
+
+
+ELF file SHA256: 6e7245027
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038075e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Sep 24 2025 07:19:26[0m
+[0;32mI (35) boot: chip revision: v0.3[0m
+[0;32mI (35) boot: efuse block revision: v1.1[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (42) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (70) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (76) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (83) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (102) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (112) esp_image: segment 0: paddr=00020020 vaddr=3c0c0020 size=20334h (131892) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=0004035c vaddr=3fc95400 size=02ed4h ( 11988) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00043238 vaddr=40380000 size=0cde0h ( 52704) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=b4e60h (740960) map[0m
+[0;32mI (273) esp_image: segment 4: paddr=00104e88 vaddr=4038cde0 size=085d8h ( 34264) load[0m
+[0;32mI (279) esp_image: segment 5: paddr=0010d468 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (286) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (286) boot: Disabling RNG early entropy source...[0m
+[0;32mI (298) cpu_start: Unicore app[0m
+[0;32mI (306) cpu_start: Pro cpu start user code[0m
+[0;32mI (306) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (306) app_init: Application information:[0m
+[0;32mI (307) app_init: Project name:     https_server_bug[0m
+[0;32mI (311) app_init: App version:      1[0m
+[0;32mI (315) app_init: Compile time:     Sep 24 2025 07:50:09[0m
+[0;32mI (320) app_init: ELF file SHA256:  6e7245027...[0m
+[0;32mI (324) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (328) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (331) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (335) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (339) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (346) heap_init: At 3FC9C930 len 000236D0 (141 KiB): RAM[0m
+[0;32mI (351) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (357) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (363) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (369) spi_flash: detected chip: generic[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;33mW (375) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (382) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (390) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (396) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (403) main_task: Started on CPU0[0m
+[0;32mI (413) main_task: Calling app_main()[0m
+[1;31mE (413) https server: app_main[0m
+[0;32mI (413) https server: NVS Flash initialization[0m
+[0;32mI (423) https server: Application driver initialization[0m
+[0;32mI (443) https server: Wi-Fi initialization[0m
+[0;32mI (443) pp: pp rom version: 9387209[0m
+[0;32mI (443) net80211: net80211 rom version: 9387209[0m
+[0;32mI (453) wifi:wifi driver task: 3fca61b8, prio:23, stack:6656, core=0[0m
+[0;32mI (453) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (453) wifi:wifi certification version: v7.0[0m
+[0;32mI (453) wifi:config NVS flash: enabled[0m
+[0;32mI (463) wifi:config nano formatting: disabled[0m
+[0;32mI (463) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (473) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (473) wifi:Init management short buffer num: 32[0m
+[0;32mI (473) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (483) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (483) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (493) wifi:Init static rx buffer num: 10[0m
+[0;32mI (493) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (493) wifi_init: rx ba win: 6[0m
+[0;32mI (503) wifi_init: accept mbox: 6[0m
+[0;32mI (503) wifi_init: tcpip mbox: 32[0m
+[0;32mI (503) wifi_init: udp mbox: 6[0m
+[0;32mI (513) wifi_init: tcp mbox: 6[0m
+[0;32mI (513) wifi_init: tcp tx win: 5760[0m
+[0;32mI (513) wifi_init: tcp rx win: 5760[0m
+[0;32mI (513) wifi_init: tcp mss: 1440[0m
+[0;32mI (523) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (523) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (533) https server: Wi-Fi Station initialization[0m
+[0;32mI (533) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (573) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (593) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (593) wifi:enable tsf[0m
+[0;32mI (593) https server: wifi_station_initialize finished.[0m
+[0;32mI (593) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (603) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (633) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (683) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (793) wifi:connected with 4 chi em, aid = 2, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (793) wifi:security: WPA2-PSK, phy: bgn, rssi: -43[0m
+[0;32mI (793) wifi:pm start, type: 1[0m
+
+[0;32mI (793) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (803) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (833) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1993) esp_netif_handlers: sta ip: 192.168.1.11, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1993) https server: got ip:192.168.1.11[0m
+[0;32mI (1993) https server: connected to ap SSID:4 chi em password:daytro6868[0m
+[0;32mI (1993) https server: Starting server[0m
+[0;32mI (2003) https server: Server certificate length: 1179[0m
+[0;32mI (2003) https server: Private key length: 1733[0m
+[0;32mI (2013) https server: Server certificate start: 0x3c0d48f0[0m
+[0;32mI (2013) https server: Private key start: 0x3c0d4d8f[0m
+[0;32mI (2023) esp_https_server: Starting server[0m
+[0;32mI (2023) esp_https_server: Server listening on port 443[0m
+[0;32mI (2023) https server: Registering URI handlers[0m
+[0;32mI (2033) https server: [00] Hello world![0m
+[0;32mI (2503) app_driver: Light OFF[0m
+[0;32mI (7033) https server: [01] Hello world![0m
+[0;32mI (12033) https server: [02] Hello world![0m
+[0;32mI (17033) https server: [03] Hello world![0m
+[0;32mI (18083) app_driver: Light ON[0m
+[0;32mI (19663) app_driver: Light OFF[0m
+[0;32mI (21213) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:23:fc:a8), tid:0, ssn:4, winSize:64[0m
+[0;32mI (21423) esp_https_server: performing session handshake[0m
+[0;32mI (22033) https server: [04] Hello world![0m
+[1;31mE (22133) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (22133) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (22133) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (22133) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (22143) esp_https_server: performing session handshake[0m
+[0;32mI (27033) https server: [05] Hello world![0m
+[0;32mI (32033) https server: [06] Hello world![0m
+[0;32mI (37033) https server: [07] Hello world![0m
+[0;32mI (42033) https server: [08] Hello world![0m
+[0;32mI (47033) https server: [09] Hello world![0m
+[0;32mI (52033) https server: [10] Hello world![0m

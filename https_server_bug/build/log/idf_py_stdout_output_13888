@@ -1,0 +1,228 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\https_server_bug\build\https_server_bug.elf D:\ESP32C3\Espressif\frameworks\https_server_bug\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Sep 24 2025 07:19:26[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (30) boot: efuse block revision: v1.1[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (65) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (72) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (78) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (85) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (91) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (98) boot:  6 fctry            WiFi data        01 02 00340000 00006000[0m
+[0;32mI (104) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00020020 vaddr=3c0c0020 size=202ech (131820) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=00040314 vaddr=3fc95400 size=02ed4h ( 11988) load[0m
+[0;32mI (138) esp_image: segment 2: paddr=000431f0 vaddr=40380000 size=0ce28h ( 52776) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=b4d28h (740648) map[0m
+[0;32mI (268) esp_image: segment 4: paddr=00104d50 vaddr=4038ce28 size=08590h ( 34192) load[0m
+[0;32mI (274) esp_image: segment 5: paddr=0010d2e8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (281) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (281) boot: Disabling RNG early entropy source...[0m
+[0;32mI (293) cpu_start: Unicore app[0m
+[0;32mI (301) cpu_start: Pro cpu start user code[0m
+[0;32mI (301) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (301) app_init: Application information:[0m
+[0;32mI (302) app_init: Project name:     https_server_bug[0m
+[0;32mI (306) app_init: App version:      1[0m
+[0;32mI (310) app_init: Compile time:     Sep 24 2025 07:50:09[0m
+[0;32mI (315) app_init: ELF file SHA256:  c6937ea94...[0m
+[0;32mI (319) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (323) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (326) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (330) efuse_init: Chip rev:         v0.3[0m
+[0;32mI (334) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (341) heap_init: At 3FC9C930 len 000236D0 (141 KiB): RAM[0m
+[0;32mI (346) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (352) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (358) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (364) spi_flash: detected chip: generic[0m
+[0;32mI (367) spi_flash: flash io: dio[0m
+[0;33mW (370) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (377) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (385) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (391) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (398) main_task: Started on CPU0[0m
+[0;32mI (408) main_task: Calling app_main()[0m
+[1;31mE (408) https server: app_main[0m
+[0;32mI (408) https server: NVS Flash initialization[0m
+[0;32mI (418) https server: Application driver initialization[0m
+[0;32mI (438) https server: Wi-Fi initialization[0m
+[0;32mI (438) pp: pp rom version: 9387209[0m
+[0;32mI (438) net80211: net80211 rom version: 9387209[0m
+[0;32mI (448) wifi:wifi driver task: 3fca623c, prio:23, stack:6656, core=0[0m
+[0;32mI (448) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (448) wifi:wifi certification version: v7.0[0m
+[0;32mI (448) wifi:config NVS flash: enabled[0m
+[0;32mI (458) wifi:config nano formatting: disabled[0m
+[0;32mI (458) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (468) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (468) wifi:Init management short buffer num: 32[0m
+[0;32mI (478) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (478) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (478) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (488) wifi:Init static rx buffer num: 10[0m
+[0;32mI (488) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (498) wifi_init: rx ba win: 6[0m
+[0;32mI (498) wifi_init: accept mbox: 6[0m
+[0;32mI (498) wifi_init: tcpip mbox: 32[0m
+[0;32mI (498) wifi_init: udp mbox: 6[0m
+[0;32mI (508) wifi_init: tcp mbox: 6[0m
+[0;32mI (508) wifi_init: tcp tx win: 5760[0m
+[0;32mI (508) wifi_init: tcp rx win: 5760[0m
+[0;32mI (518) wifi_init: tcp mss: 1440[0m
+[0;32mI (518) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (518) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (528) https server: Wi-Fi Station initialization[0m
+[0;32mI (528) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (568) wifi:mode : sta (7c:df:a1:5e:91:80)[0m
+[0;32mI (568) wifi:enable tsf[0m
+[0;32mI (568) https server: wifi_station_initialize finished.[0m
+[0;32mI (578) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (578) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (608) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (668) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (768) wifi:connected with 4 chi em, aid = 5, channel 10, BW20, bssid = cc:71:90:23:fc:a8[0m
+[0;32mI (768) wifi:security: WPA2-PSK, phy: bgn, rssi: -43[0m
+[0;32mI (778) wifi:pm start, type: 1[0m
+
+[0;32mI (778) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (788) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (828) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2048) esp_netif_handlers: sta ip: 192.168.1.11, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2048) https server: got ip:192.168.1.11[0m
+[0;32mI (2048) https server: connected to ap SSID:4 chi em password:daytro6868[0m
+[0;32mI (2048) https server: Starting server[0m
+[0;32mI (2058) https server: Server certificate length: 1179[0m
+[0;32mI (2058) https server: Private key length: 1733[0m
+[0;32mI (2068) https server: Server certificate start: 0x3c0d48ac[0m
+[0;32mI (2068) https server: Private key start: 0x3c0d4d4b[0m
+[0;32mI (2078) esp_https_server: Starting server[0m
+[0;32mI (2078) esp_https_server: Server listening on port 443[0m
+[0;32mI (2078) https server: Registering URI handlers[0m
+[0;32mI (2088) https server: [00] Hello world![0m
+[0;32mI (7088) https server: [01] Hello world![0m
+[0;32mI (12088) https server: [02] Hello world![0m
+[0;32mI (17088) https server: [03] Hello world![0m
+[0;32mI (17838) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:23:fc:a8), tid:0, ssn:4, winSize:64[0m
+[0;32mI (18048) esp_https_server: performing session handshake[0m
+[1;31mE (18768) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (18768) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (18768) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (18778) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (18778) esp_https_server: performing session handshake[0m
+[1;31mE (19498) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (19498) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (19498) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (19508) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (19508) esp_https_server: performing session handshake[0m
+[1;31mE (20228) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (20228) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (20228) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (20238) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (20238) esp_https_server: performing session handshake[0m
+[1;31mE (20998) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7280[0m
+[1;31mE (20998) esp_https_server: esp_tls_create_server_session failed, 0x7280[0m
+[1;31mE (21008) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (21008) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (21018) esp_https_server: performing session handshake[0m
+[1;31mE (21778) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7280[0m
+[1;31mE (21778) esp_https_server: esp_tls_create_server_session failed, 0x7280[0m
+[1;31mE (21778) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (21788) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (22088) https server: [04] Hello world![0m
+[0;32mI (27088) https server: [05] Hello world![0m
+[0;32mI (31148) esp_https_server: performing session handshake[0m
+[0;32mI (32088) https server: [06] Hello world![0m
+[0;32mI (35668) esp_https_server: performing session handshake[0m
+[1;31mE (36378) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (36378) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (36378) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (36378) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (37088) https server: [07] Hello world![0m
+[0;32mI (38318) esp_https_server: performing session handshake[0m
+[1;31mE (39028) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (39028) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (39028) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (39038) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (39038) esp_https_server: performing session handshake[0m
+[1;31mE (39758) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (39758) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (39758) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (39768) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (39768) esp_https_server: performing session handshake[0m
+[0;32mI (42088) https server: [08] Hello world![0m
+[0;32mI (47088) https server: [09] Hello world![0m
+[0;32mI (48358) esp_https_server: performing session handshake[0m
+[1;31mE (49068) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (49068) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (49068) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (49078) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (49078) esp_https_server: performing session handshake[0m
+[1;31mE (49788) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (49798) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (49798) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (49798) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (49808) esp_https_server: performing session handshake[0m
+[0;32mI (52088) https server: [10] Hello world![0m
+[0;32mI (57088) https server: [11] Hello world![0m
+[0;32mI (62088) https server: [12] Hello world![0m
+[0;32mI (67088) https server: [13] Hello world![0m
+[0;32mI (72088) https server: [14] Hello world![0m
+[0;32mI (77088) https server: [15] Hello world![0m
+[0;32mI (82088) https server: [16] Hello world![0m
+[0;32mI (87088) https server: [17] Hello world![0m
+[0;32mI (92088) https server: [18] Hello world![0m
+[0;32mI (97088) https server: [19] Hello world![0m
+[0;32mI (102088) https server: [20] Hello world![0m
+[0;32mI (107088) https server: [21] Hello world![0m
+[0;32mI (112088) https server: [22] Hello world![0m
+[0;32mI (117088) https server: [23] Hello world![0m
+[0;32mI (122088) https server: [24] Hello world![0m
+[0;32mI (127088) https server: [25] Hello world![0m
+[0;32mI (132088) https server: [26] Hello world![0m
+[0;32mI (137088) https server: [27] Hello world![0m
+[0;32mI (142088) https server: [28] Hello world![0m
+[0;32mI (147088) https server: [29] Hello world![0m
+[0;32mI (150058) app_driver: Light OFF[0m
+[0;32mI (152088) https server: [30] Hello world![0m
+[0;32mI (153838) esp_https_server: performing session handshake[0m
+[1;31mE (154548) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (154548) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (154558) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (154558) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (154568) esp_https_server: performing session handshake[0m
+[0;32mI (155018) app_driver: Light ON[0m
+[1;31mE (155278) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7780[0m
+[1;31mE (155288) esp_https_server: esp_tls_create_server_session failed, 0x7780[0m
+[1;31mE (155288) httpd: httpd_accept_conn: session creation failed[0m
+[0;33mW (155288) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (155298) esp_https_server: performing session handshake[0m
+[0;32mI (157088) https server: [31] Hello world![0m
+[0;32mI (162088) https server: [32] Hello world![0m
+[0;32mI (167088) https server: [33] Hello world![0m
+[0;32mI (172088) https server: [34] Hello world![0m
+[0;32mI (177088) https server: [35] Hello world![0m
+[0;32mI (182088) https server: [36] Hello world![0m
+[0;32mI (187088) https server: [37] Hello world![0m
+[0;32mI (192088) https server: [38] Hello world![0m
+[0;32mI (197088) https server: [39] Hello world![0m
+[0;32mI (202088) https server: [40] Hello world![0m
+[0;32mI (207088) https server: [41] Hello world![0m
+[0;32mI (212088) https server: [42] Hello world![0m
+[0;32mI (217088) https server: [43] Hello world![0m

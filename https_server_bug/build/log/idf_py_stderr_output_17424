@@ -1,0 +1,22 @@
+Command: D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com4 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace D:\ESP32C3\Espressif\frameworks\https_server_bug\build\https_server_bug.elf D:\ESP32C3\Espressif\frameworks\https_server_bug\build\bootloader\bootloader.elf --force-color -m 'D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com4'
+[0;33m--- esp-idf-monitor 1.8.0 on com4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4201bcc2: [0;33mtimer_pause[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/driver/deprecated/timer_legacy.c[0m[0m:[1;31m120[0m
+[0m--- 0x40381e04: [0;33m_timer_pause[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/components/light_driver/iot_led.c[0m[0m:[1;31m72[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'D:\\ESP32C3\\Espressif\\frameworks\\https_server_bug\\build\\https_server_bug.elf', '-ex', 'add-symbol-file D:\\ESP32C3\\Espressif\\frameworks\\https_server_bug\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "D:\\ESP32C3\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\tutra\\AppData\\Local\\Temp\\tmpgcpjmysz"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "D:ESP32C3Espressifframeworkshttps_server_bugbuildbootloaderbootloader.elf"\r\nD:ESP32C3Espressifframeworkshttps_server_bugbuildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'D:\\ESP32C3\\Espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\tutra\\AppData\\Local\\Temp\\tmpgcpjmysz\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x4038075e: [0;33mesp_restart_noos[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mD:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

@@ -1,0 +1,2 @@
+source D:/ESP32C3/Espressif/frameworks/https_server_bug/build/bootloader/gdbinit/symbols
+source D:/ESP32C3/Espressif/frameworks/https_server_bug/build/bootloader/gdbinit/connect
