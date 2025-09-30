@@ -1,0 +1,2 @@
+source D:/ESP32C3/Espressif/frameworks/gatt_server/build/gdbinit/symbols
+source D:/ESP32C3/Espressif/frameworks/gatt_server/build/gdbinit/connect

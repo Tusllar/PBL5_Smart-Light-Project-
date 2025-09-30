@@ -1,0 +1,90 @@
+Command: ninja flash
+[1/10] Building C object esp-idf/light_driver/CMakeFiles/__idf_light_driver.dir/light_driver.c.obj
+In file included from D:/ESP32C3/Espressif/frameworks/components/light_driver/include/iot_led.h:21,
+                 from D:/ESP32C3/Espressif/frameworks/components/light_driver/include/light_driver.h:18,
+                 from D:/ESP32C3/Espressif/frameworks/components/light_driver/light_driver.c:23:
+D:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+[2/10] Linking C static library esp-idf\light_driver\liblight_driver.a
+[3/10] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\ESP32C3\Espressif\frameworks\gatt_server\build\bootloader\esp-idf\esptool_py && D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/ESP32C3/Espressif/frameworks/gatt_server/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[4/10] No install step for 'bootloader'
+[5/10] Completed 'bootloader'
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable gatt_server_demos.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated D:/ESP32C3/Espressif/frameworks/gatt_server/build/gatt_server_demos.bin
+[9/10] C:\Windows\system32\cmd.exe /C "cd /D D:\ESP32C3\Espressif\frameworks\gatt_server\build\esp-idf\esptool_py && D:\ESP32C3\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP32C3/Espressif/frameworks/gatt_server/build/partition_table/partition-table.bin D:/ESP32C3/Espressif/frameworks/gatt_server/build/gatt_server_demos.bin"
+gatt_server_demos.bin binary size 0xd4c90 bytes. Smallest app partition is 0x190000 bytes. 0xbb370 bytes (47%) free.
+[9/10] C:\Windows\system32\cmd.exe /C "cd /D D:\ESP32C3\Espressif\frameworks\esp-idf-v5.5\components\esptool_py && D:\ESP32C3\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=D:/ESP32C3/Espressif/frameworks/esp-idf-v5.5 -D SERIAL_TOOL=D:/ESP32C3/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;D:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esptool_py/esptool/esptool.py;--chip;esp32c3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP32C3/Espressif/frameworks/gatt_server/build -P D:/ESP32C3/Espressif/frameworks/esp-idf-v5.5/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32c3 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x20000 gatt_server_demos.bin 0x8000 partition_table/partition-table.bin 0x16000 ota_data_initial.bin
+esptool.py v4.10.0
+Serial port COM4
+Connecting....
+Chip is ESP32-C3 (QFN32) (revision v0.3)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: 7c:df:a1:5e:91:80
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00020000 to 0x000f4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00016000 to 0x00017fff...
+SHA digest in image updated
+Compressed 21056 bytes to 13211...
+Writing at 0x00000000... (100 %)
+Wrote 21056 bytes (13211 compressed) at 0x00000000 in 0.7 seconds (effective 249.8 kbit/s)...
+Hash of data verified.
+Compressed 871568 bytes to 444709...
+Writing at 0x00020000... (3 %)
+Writing at 0x0002d568... (7 %)
+Writing at 0x0003a09d... (10 %)
+Writing at 0x00044a1e... (14 %)
+Writing at 0x0004ad88... (17 %)
+Writing at 0x000511c6... (21 %)
+Writing at 0x00057e83... (25 %)
+Writing at 0x00060057... (28 %)
+Writing at 0x00067e0d... (32 %)
+Writing at 0x0006f9ad... (35 %)
+Writing at 0x0007711c... (39 %)
+Writing at 0x0007e64a... (42 %)
+Writing at 0x000854c7... (46 %)
+Writing at 0x0008d8f2... (50 %)
+Writing at 0x000956a6... (53 %)
+Writing at 0x0009df64... (57 %)
+Writing at 0x000a5933... (60 %)
+Writing at 0x000ad2aa... (64 %)
+Writing at 0x000b4112... (67 %)
+Writing at 0x000bb5ae... (71 %)
+Writing at 0x000c2e4d... (75 %)
+Writing at 0x000c9cae... (78 %)
+Writing at 0x000d113f... (82 %)
+Writing at 0x000d6f96... (85 %)
+Writing at 0x000dd85b... (89 %)
+Writing at 0x000e5541... (92 %)
+Writing at 0x000ec686... (96 %)
+Writing at 0x000f39b6... (100 %)
+Wrote 871568 bytes (444709 compressed) at 0x00020000 in 13.5 seconds (effective 516.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 159...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (159 compressed) at 0x00008000 in 0.1 seconds (effective 408.1 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x00016000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x00016000 in 0.1 seconds (effective 573.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
